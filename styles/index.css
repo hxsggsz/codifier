@@ -1,0 +1,168 @@
+header img {
+  border-radius: 50%;
+}
+
+.main-content {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: start;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    align-items: start;
+    flex-direction: column;
+  }
+}
+
+.content-wrapper {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+
+.input {
+  font-size: 3rem;
+  outline: none;
+  border: none;
+  background: var(--white-light);
+  color: var(--blue);
+  width: 100%;
+  padding-left: 1.6rem;
+  resize: none;
+  padding-bottom: 10rem;
+}
+/* scrollbar */
+.input::-webkit-scrollbar {
+  width: 7px;
+  background: none;
+  border: none;
+}
+
+.input::-webkit-scrollbar-thumb {
+  background: var(--blue);
+  border-radius: 4px;
+}
+
+@media (min-width: 600px) {
+  .input {
+    padding-bottom: 20rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .input {
+    width: 60vw;
+    margin-left: 10rem;
+  }
+}
+
+.ph-bold {
+  font-size: 2rem;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0 .5rem;
+  padding: 1.6rem;
+  width: 100%;
+}
+
+.info p {
+  font-size: 1.2rem;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2.4rem;
+  width: 100%;
+  padding: 0 1.6rem;
+}
+
+@media (min-width: 600px) {
+  .buttons {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 768px) {
+  .buttons {
+    flex-direction: row;
+  }
+}
+
+.buttons button {
+  cursor: pointer;
+  padding: 2rem 0;
+  border-radius: 2.4rem;
+  background: none;
+  border: 1px solid var(--blue);
+  font-size: 1.6rem;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .buttons button{
+    max-width: 32rem;
+  }
+}
+
+.buttons button:first-child {
+  background: var(--blue);
+  color: var(--white);
+}
+
+.codified-wrapper {
+  padding: 0 1.6rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.codified {
+  background: var(--white);
+  border-radius: 3.2rem;
+  box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+  padding: 3.2rem;
+  margin: 2rem 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.codified h1 {
+  font-size: min(6vw, 2.4rem);
+}
+
+.codified p {
+  font-size: min(6vw, 1.6rem);
+}
+
+.codified img {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .codified {
+    margin: 0;
+    max-width: 30vw;
+    min-height: 70vh;
+    align-items: center;
+  }
+  
+  .codified img {
+    display: block;
+  }
+}

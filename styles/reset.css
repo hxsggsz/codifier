@@ -1,0 +1,43 @@
+:root {
+  --white-light: #f3f5fc;
+  --white: #ffffff;
+  --blue: #0a3871;
+  --black: #343a40;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+body {
+  background: var(--white-light);
+  font-family: 'Inter', sans-serif;
+  width: 100vw;
+  overflow-x: hidden;
+}
+/* scrollbar */
+body::-webkit-scrollbar {
+  width: 7px;
+  background: none;
+  border: none;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--blue);
+  border-radius: 4px;
+}         
+
+h1, p, a {
+  text-decoration: none;
+} 
+
+h1 {
+  font-size: min(6vw, 3.2rem);
+}
+
+p {
+  font-size: min(6vw, 2.2rem);
+}
