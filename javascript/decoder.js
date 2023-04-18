@@ -1,3 +1,5 @@
+let text
+
 function decode(str) {
   const vowels = /[aeiou]/gi;
 
@@ -21,7 +23,7 @@ function decode(str) {
 
 function uncode(str) {
   const vowels = /(ai|enter|imes|ober|ufat)/gi
-  
+
   const uncoder = str.replace(vowels, function (vowel) {
     switch (vowel) {
       case "ai":
@@ -44,5 +46,21 @@ let input = document.querySelector("#input")
 let coder = document.querySelector("#coder")
 let uncoder = document.querySelector("#uncoder")
 
-coder.addEventListener("click", () => decode(input.value))
-uncoder.addEventListener("click", () => uncode(input.value))
+coder.addEventListener("click", () => {
+  text = document.querySelector("#text")
+  text.textContent = decode(input.value)
+  text.textContent !== "" ? document.getElementById("empty").style.display = "none" : document.getElementById("empty").style.display = "block"
+})
+
+uncoder.addEventListener("click", () => {
+  text = document.querySelector("#text")
+  text.textContent = uncode(input.value)
+
+  text.textContent !== "" ? document.getElementById("empty").style.display = "none" : document.getElementById("empty").style.display = "block"
+})
+
+let check = document.getElementById("theme")
+
+check.addEventListener("click", () => {
+  console.log(check.value)
+})
