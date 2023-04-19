@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,
       initial-scale=1.0">
-    <title>Document</title>
+    <title>Decoder</title>
     <link rel="stylesheet" type="text/css"
       href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/bold/style.css" />
     <link rel="stylesheet" type="text/css" href="styles/reset.css">
@@ -16,7 +16,10 @@
   <body>
     <header>
       <img src="assets/Header.png" alt="icone do cadeado" />
-      <input id="theme" type="checkbox"/>
+      <div class="toggle">
+        <i id="moon" class="ph-bold ph-moon"></i>
+        <i id="sun" class="ph-bold ph-sun"></i>
+      </div>
     </header>
     <div class="main-content">
       <div class="content-wrapper">
@@ -35,19 +38,23 @@
       </div>
 
       <div class="codified-wrapper">
+
         <div id="codified" class="codified">
           <h1 id="text"></h1>
-          <!-- Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae perspiciatis nam mollitia excepturi ut natus sint soluta voluptate nihil temporibus inventore minima nulla qui, magni fugit similique. Sapiente, fugiat nemo. -->
+
           <div id="empty" class="empty">
             <img src="assets/empty.png" width="250" height="250"/>
             <h1>Nenhuma mensagem encontrada</h1>
             <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
           </div>
+
         </div>
+
       </div>
     </div>
 
     <script src="javascript/decoder.js"></script>
+    <script src="javascript/theme.js"></script>
   </body>
 
 </html>

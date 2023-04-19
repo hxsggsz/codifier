@@ -17,7 +17,18 @@ body {
   font-family: 'Inter', sans-serif;
   width: 100vw;
   overflow-x: hidden;
+  transition: background 0.2s ease-in
 }
+
+body.lightmode {
+  background: var(--white-light);
+}
+
+body.darkmode {
+  background: #1e1e1e;
+  color: var(--white-light);
+}
+
 /* scrollbar */
 body::-webkit-scrollbar {
   width: 7px;

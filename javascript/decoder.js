@@ -58,9 +58,3 @@ uncoder.addEventListener("click", () => {
 
   text.textContent !== "" ? document.getElementById("empty").style.display = "none" : document.getElementById("empty").style.display = "block"
 })
-
-let check = document.getElementById("theme")
-
-check.addEventListener("click", () => {
-  console.log(check.value)
-})

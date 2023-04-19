@@ -10,6 +10,15 @@ header img {
   border-radius: 50%;
 }
 
+.ph-bold.ph-sun, .ph-bold.ph-moon {
+  font-size: 3rem;
+  color: var(--blue);
+  cursor: pointer;
+}
+.ph-bold.ph-sun {
+  display: none;
+}
+
 .main-content {
   display: flex;
   width: 100%;
@@ -42,9 +51,10 @@ header img {
   font-size: 3rem;
   outline: none;
   border: none;
-  background: var(--white-light);
+  background: none;
   color: var(--blue);
   width: 100%;
+  height: 35vh;
   padding-left: 1.6rem;
   resize: none;
   padding-bottom: 10rem;
@@ -68,13 +78,13 @@ header img {
 
 @media (min-width: 600px) {
   .input {
-    padding-bottom: 20rem;
+    height: 52vh;
   }
 }
 
 @media (min-width: 768px) {
   .input {
-    width: 55vw;
+    width: 50vw;
   }
 }
 
@@ -121,9 +131,11 @@ header img {
   cursor: pointer;
   padding: 2rem 0;
   border-radius: 2.4rem;
-  background: none;
-  border: 1px solid var(--blue);
+  background: var(--white-light);
+  border: .2rem solid var(--blue);
+  color: var(--blue);
   font-size: 1.6rem;
+  font-weight: bold;
   width: 100%;
 }
 
@@ -139,19 +151,18 @@ header img {
 }
 
 .codified-wrapper {
-  padding: 2rem;
+  padding: .5rem 0;
   width: 100%;
-  height: 100%;
   max-width: 98vw;
   display: flex;
   align-items: start;
   justify-content: center;
-  height: 45rem;
   background: var(--white);
   border-radius: 3.2rem;
   box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
   overflow-y: auto;
   overflow-x: hidden;
+  margin-top: 2rem;
 }
 
 /* scrollbar */
@@ -167,23 +178,29 @@ header img {
 }
 
 @media (min-width: 768px) {
-  .codified-wrapper{
-    max-width: 40vw;
+  .codified-wrapper {
+    margin-top: 0;
+    max-width: 45vw;
+    height: 45rem;
+    align-items: start;
+    justify-content: center;
   }
 }
 
 .codified {
-  width: 100%;
   display: flex;
   align-items: start;
   text-align: center;
   justify-content: center;
   flex-direction: column;
+  overflow: hidden;
+  min-height: 10vh;
 }
 
 #text {
-  width: 100%;
   text-align: start;
+  padding-left: .8rem;
+  font-size: min(6vw, 2rem);
 }
 
 .codified h1 {
@@ -203,11 +220,11 @@ header img {
 @media (min-width: 768px) {
   .codified, .empty {
     margin: 0;
-    max-width: 30vw;
+    height: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    flex-direction: column;
   }
   
   .codified .empty img {
